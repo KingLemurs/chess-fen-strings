@@ -5,6 +5,7 @@
 #include "classes/Othello.h"
 #include "classes/Connect4.h"
 #include "classes/Chess.h"
+#include "classes/Logger.h"
 
 namespace ClassGame {
         //
@@ -13,6 +14,7 @@ namespace ClassGame {
         Game *game = nullptr;
         bool gameOver = false;
         int gameWinner = -1;
+        Logger& log = Logger::GetInstance();
 
         //
         // game starting point
@@ -21,6 +23,8 @@ namespace ClassGame {
         void GameStartUp() 
         {
             game = nullptr;
+            log.LogGameEvent("Application Started");
+            log.LogGameEvent("Game Started");
         }
 
         //
@@ -30,6 +34,7 @@ namespace ClassGame {
         void RenderGame() 
         {
                 ImGui::DockSpaceOverViewport();
+                log.Draw();
 
                 //ImGui::ShowDemoWindow();
 

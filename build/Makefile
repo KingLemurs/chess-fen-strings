@@ -739,6 +739,30 @@ classes/Grid.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/Grid.cpp.s
 .PHONY : classes/Grid.cpp.s
 
+classes/Logger.o: classes/Logger.cpp.o
+.PHONY : classes/Logger.o
+
+# target to build an object file
+classes/Logger.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/Logger.cpp.o
+.PHONY : classes/Logger.cpp.o
+
+classes/Logger.i: classes/Logger.cpp.i
+.PHONY : classes/Logger.i
+
+# target to preprocess a source file
+classes/Logger.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/Logger.cpp.i
+.PHONY : classes/Logger.cpp.i
+
+classes/Logger.s: classes/Logger.cpp.s
+.PHONY : classes/Logger.s
+
+# target to generate assembly for a file
+classes/Logger.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/Logger.cpp.s
+.PHONY : classes/Logger.cpp.s
+
 classes/Othello.o: classes/Othello.cpp.o
 .PHONY : classes/Othello.o
 
@@ -1094,6 +1118,9 @@ help:
 	@echo "... classes/Grid.o"
 	@echo "... classes/Grid.i"
 	@echo "... classes/Grid.s"
+	@echo "... classes/Logger.o"
+	@echo "... classes/Logger.i"
+	@echo "... classes/Logger.s"
 	@echo "... classes/Othello.o"
 	@echo "... classes/Othello.i"
 	@echo "... classes/Othello.s"

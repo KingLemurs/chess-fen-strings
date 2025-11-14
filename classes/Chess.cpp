@@ -49,7 +49,12 @@ void Chess::setUpBoard()
     _gameOptions.rowY = 8;
 
     _grid->initializeChessSquares(pieceSize, "boardsquare.png");
+    _highlights.reserve(32);
+
     FENtoBoard("rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR");
+    GenKnightBoards();
+    GenKingBoards();
+    GenAllMoves();
     startGame();
 }
 
@@ -120,23 +125,232 @@ void Chess::FENtoBoard(const std::string& fen) {
     }
 }
 
+// compile all possible moves for knights FROM each index
+void Chess::GenKnightBoards() {
+    for (int y = 0; y < _gameOptions.rowX; y++) {
+        for (int x = 0; x < _gameOptions.rowY; x++) {
+            int index = y * 8 + x;
+            u_int64_t data = _knightBoards[index].getData();
+            std::pair<int, int> knightOffsets[] = {
+                {2,1}, {2,-1}, {-2,1}, {-2,-1},
+                {1,2}, {1,-2}, {-1,2}, {-1,-2} 
+            };
+            
+            for (auto [ox, oy] : knightOffsets) {
+                // bc y is row and x is col
+                int rank = y + ox, file = x + oy;
+                if (rank >= 0 && rank < 8 && file >= 0 && file < 8) {
+                    // set bit
+                    data |= 1ULL << (rank * 8 + file);
+                }
+            }
+            _knightBoards[index].setData(data);
+        }
+    }
+}
+
+void Chess::GenKingBoards() {
+    for (int y = 0; y < _gameOptions.rowX; y++) {
+        for (int x = 0; x < _gameOptions.rowY; x++) {
+            int index = y * 8 + x;
+            u_int64_t data = _kingBoards[index].getData();
+            std::pair<int, int> kingOffsets[] = {
+                {0,1}, {0,-1}, {1,0}, {-1,0},
+                {1,1}, {1,-1}, {-1,1}, {-1,-1} 
+            };
+            
+            for (auto [ox, oy] : kingOffsets) {
+                // bc y is row and x is col
+                int rank = y + ox, file = x + oy;
+                if (rank >= 0 && rank < 8 && file >= 0 && file < 8) {
+                    // set bit
+                    data |= 1ULL << (rank * 8 + file);
+                }
+            }
+            _kingBoards[index].setData(data);
+        }
+    }
+}
+
+void Chess::GenAllMoves() {
+    _moves.reserve(32);
+    std::string state = stateString();
+    u_int64_t occupancy = 0LL;
+    u_int64_t blackOccupancy = 0LL;
+    BitboardElement whiteKnights;
+    BitboardElement whitePawns;
+    BitboardElement whiteKing;
+    BitboardElement blackKnights;
+    BitboardElement blackPawns;
+    BitboardElement blackKing;
+    u_int64_t knightData = whiteKnights.getData();
+    u_int64_t pawnData = whitePawns.getData();
+    u_int64_t kingData = whiteKing.getData();
+    u_int64_t blackKnightData = whiteKnights.getData();
+    u_int64_t blackPawnData = whitePawns.getData();
+    u_int64_t blackKingData = blackKing.getData();
+    for (int i = 0; i < 64; i++) {
+        if (state[i] == 'P') {
+            pawnData |= 1ULL << i;
+        }
+        else if (state[i] == 'N') {
+            knightData |= 1ULL << i;
+        }
+        else if (state[i] == 'K') {
+            kingData |= 1ULL << i;
+        }
+        else if (state[i] == 'p') {
+            blackPawnData |= 1ULL << i;
+        }
+        else if (state[i] == 'n') {
+            blackKnightData |= 1ULL << i;
+        }
+        else if (state[i] == 'k') {
+            blackKingData |= 1ULL << i;
+        }
+    }
+    whiteKnights.setData(knightData);
+    whitePawns.setData(pawnData);
+    whiteKing.setData(kingData);
+    blackKnights.setData(blackKnightData);
+    blackPawns.setData(blackPawnData);
+    blackKing.setData(blackKingData);
+
+    occupancy = knightData | pawnData | kingData;
+    blackOccupancy = blackKnightData | blackPawnData | blackKingData;
+    GenKnightMoves(_moves, whiteKnights, ~occupancy);
+    GenKnightMoves(_moves, blackKnights, ~blackOccupancy);
+    GenKingMoves(_moves, whiteKing, ~occupancy);
+    GenKingMoves(_moves, blackKing, ~blackOccupancy);
+
+    if (getCurrentPlayer()->playerNumber() == 0) {
+        GenPawnMoves(_moves, whitePawns, ~(occupancy | blackOccupancy), blackOccupancy);
+    } else {
+        GenPawnMoves(_moves, blackPawns, ~(blackOccupancy | occupancy), occupancy);
+    }
+}
+
+void Chess::GenKnightMoves(std::vector<BitMove>& moves, BitboardElement board, u_int64_t emptySquares) {
+    board.forEachBit([&](int fromSquare) {
+        // and-ing with emptySquares will remove any moves that are impossible in the current context
+        BitboardElement moveBitboard = BitboardElement(_knightBoards[fromSquare].getData() & emptySquares);
+
+        // use bit logic to efficiently go through each set bit
+        moveBitboard.forEachBit([&](int toSquare) {
+            // emplace_back does not copy so better performance
+            moves.emplace_back(fromSquare, toSquare, Knight);
+        });
+    });
+}
+
+void Chess::GenKingMoves(std::vector<BitMove>& moves, BitboardElement board, u_int64_t emptySquares) {
+    board.forEachBit([&](int fromSquare) {
+        // and-ing with emptySquares will remove any moves that are impossible in the current context
+        BitboardElement moveBitboard = BitboardElement(_kingBoards[fromSquare].getData() & emptySquares);
+
+        // use bit logic to efficiently go through each set bit
+        moveBitboard.forEachBit([&](int toSquare) {
+            // emplace_back does not copy so better performance
+            moves.emplace_back(fromSquare, toSquare, King);
+        });
+    });
+}
+
+void Chess::GenPawnMoves(std::vector<BitMove>& moves, BitboardElement board, u_int64_t emptySquares, u_int64_t enemyPieces) {
+    int currentPlayer = getCurrentPlayer()->playerNumber() * 128;
+
+    // single moves
+    // shifting 8 moves up bits one rank
+    BitboardElement singleMoves = (currentPlayer == 0) ? (board.getData() << 8) & emptySquares : (board.getData() >> 8) & emptySquares;
+
+    // we have the mask that shifts 2 ranks
+    BitboardElement doubleMoves = (currentPlayer == 0) ? ((singleMoves.getData() & Rank3) << 8) & emptySquares : ((singleMoves.getData() & Rank6) >> 8) & emptySquares;
+
+    // shift 7 so that the bits align one left, AFile mask blocks the first col
+    BitboardElement leftMoves = (currentPlayer == 0) ? ((board.getData() & AFileMask) << 7) & enemyPieces : ((board.getData() & HFileMask) >> 9) & enemyPieces;
+    // shift 9 so that the bits align one right, HFile mask blocks the last col
+    BitboardElement rightMoves = (currentPlayer == 0) ? ((board.getData() & HFileMask) << 9) & enemyPieces : ((board.getData() & AFileMask) >> 7) & enemyPieces;
+
+    int dir = (currentPlayer == 0) ? 8 : -8;
+    int captureLeft = (currentPlayer == 0) ? 7 : -9;
+    int captureRight = (currentPlayer == 0) ? 9 : -7;
+    singleMoves.forEachBit([&](int toSquare){
+        _moves.emplace_back(toSquare - dir, toSquare, Pawn);
+    });
+
+    leftMoves.forEachBit([&](int toSquare){
+        _moves.emplace_back(toSquare - captureLeft, toSquare, Pawn);
+    });
+
+    rightMoves.forEachBit([&](int toSquare){
+        _moves.emplace_back(toSquare - captureRight, toSquare, Pawn);
+    });
+
+    doubleMoves.forEachBit([&](int toSquare){
+        _moves.emplace_back(toSquare - dir * 2, toSquare, Pawn);
+    });
+}
+
 bool Chess::actionForEmptyHolder(BitHolder &holder)
 {
     return false;
 }
 
+void Chess::endTurn() {
+    _moves.clear();
+
+    // remove highlights
+    for (ChessSquare* sq : _highlights) {
+        sq->setHighlighted(false);
+    }
+    _highlights.clear();
+    Game::endTurn();
+    GenAllMoves();
+}
+
 bool Chess::canBitMoveFrom(Bit &bit, BitHolder &src)
 {
+    // remove highlights
+    for (ChessSquare* sq : _highlights) {
+        sq->setHighlighted(false);
+    }
+    _highlights.clear();
+
     // need to implement friendly/unfriendly in bit so for now this hack
     int currentPlayer = getCurrentPlayer()->playerNumber() * 128;
     int pieceColor = bit.gameTag() & 128;
-    if (pieceColor == currentPlayer) return true;
+
+    if (pieceColor == currentPlayer) {
+        //if the piece is yours
+        bool ret = false;
+        ChessSquare* square = (ChessSquare *)&src;
+        if(square) {
+            int squareIndex = square->getSquareIndex();
+            for(auto move : _moves) { //check each move
+                if(move.from == squareIndex) {
+                    auto dest = _grid->getSquareByIndex(move.to);
+
+                    if (dest->bit() && dest->bit()->getOwner() == getCurrentPlayer()) continue;
+
+                    ret = true;
+                    dest->setHighlighted(true);
+                    _highlights.emplace_back(dest);
+                }
+            }
+        }
+        return ret;
+    }
     return false;
 }
 
 bool Chess::canBitMoveFromTo(Bit &bit, BitHolder &src, BitHolder &dst)
 {
-    return true;
+    for (BitMove move : _moves) {
+        if (move.from == static_cast<ChessSquare&>(src).getSquareIndex() && move.to == static_cast<ChessSquare&>(dst).getSquareIndex()) {
+            return true;
+        }
+    }
+    return false;
 }
 
 void Chess::stopGame()

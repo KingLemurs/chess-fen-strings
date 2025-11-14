@@ -79,6 +79,12 @@
 },
 {
   "directory": "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build",
+  "command": "/usr/bin/clang++  -F/Applications/Xcode15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -std=gnu++20 -arch arm64 -o CMakeFiles/demo.dir/classes/Logger.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.cpp",
+  "file": "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.cpp",
+  "output": "CMakeFiles/demo.dir/classes/Logger.cpp.o"
+},
+{
+  "directory": "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build",
   "command": "/usr/bin/clang++  -F/Applications/Xcode15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -g -std=gnu++20 -arch arm64 -o CMakeFiles/demo.dir/classes/TicTacToe.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/TicTacToe.cpp",
   "file": "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/TicTacToe.cpp",
   "output": "CMakeFiles/demo.dir/classes/TicTacToe.cpp.o"

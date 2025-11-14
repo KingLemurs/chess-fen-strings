@@ -254,10 +254,24 @@ CMakeFiles/demo.dir/classes/Grid.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Grid.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Grid.cpp -o CMakeFiles/demo.dir/classes/Grid.cpp.s
 
+CMakeFiles/demo.dir/classes/Logger.cpp.o: CMakeFiles/demo.dir/flags.make
+CMakeFiles/demo.dir/classes/Logger.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.cpp
+CMakeFiles/demo.dir/classes/Logger.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/classes/Logger.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Logger.cpp.o -MF CMakeFiles/demo.dir/classes/Logger.cpp.o.d -o CMakeFiles/demo.dir/classes/Logger.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.cpp
+
+CMakeFiles/demo.dir/classes/Logger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/demo.dir/classes/Logger.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.cpp > CMakeFiles/demo.dir/classes/Logger.cpp.i
+
+CMakeFiles/demo.dir/classes/Logger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/demo.dir/classes/Logger.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.cpp -o CMakeFiles/demo.dir/classes/Logger.cpp.s
+
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/TicTacToe.cpp
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/demo.dir/classes/TicTacToe.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/demo.dir/classes/TicTacToe.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/TicTacToe.cpp.o -MF CMakeFiles/demo.dir/classes/TicTacToe.cpp.o.d -o CMakeFiles/demo.dir/classes/TicTacToe.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/TicTacToe.cpp
 
 CMakeFiles/demo.dir/classes/TicTacToe.cpp.i: cmake_force
@@ -271,7 +285,7 @@ CMakeFiles/demo.dir/classes/TicTacToe.cpp.s: cmake_force
 CMakeFiles/demo.dir/classes/Checkers.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/classes/Checkers.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Checkers.cpp
 CMakeFiles/demo.dir/classes/Checkers.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/demo.dir/classes/Checkers.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/demo.dir/classes/Checkers.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Checkers.cpp.o -MF CMakeFiles/demo.dir/classes/Checkers.cpp.o.d -o CMakeFiles/demo.dir/classes/Checkers.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Checkers.cpp
 
 CMakeFiles/demo.dir/classes/Checkers.cpp.i: cmake_force
@@ -285,7 +299,7 @@ CMakeFiles/demo.dir/classes/Checkers.cpp.s: cmake_force
 CMakeFiles/demo.dir/classes/Othello.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/classes/Othello.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Othello.cpp
 CMakeFiles/demo.dir/classes/Othello.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/demo.dir/classes/Othello.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/demo.dir/classes/Othello.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Othello.cpp.o -MF CMakeFiles/demo.dir/classes/Othello.cpp.o.d -o CMakeFiles/demo.dir/classes/Othello.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Othello.cpp
 
 CMakeFiles/demo.dir/classes/Othello.cpp.i: cmake_force
@@ -299,7 +313,7 @@ CMakeFiles/demo.dir/classes/Othello.cpp.s: cmake_force
 CMakeFiles/demo.dir/classes/Connect4.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/classes/Connect4.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Connect4.cpp
 CMakeFiles/demo.dir/classes/Connect4.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/demo.dir/classes/Connect4.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/demo.dir/classes/Connect4.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Connect4.cpp.o -MF CMakeFiles/demo.dir/classes/Connect4.cpp.o.d -o CMakeFiles/demo.dir/classes/Connect4.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Connect4.cpp
 
 CMakeFiles/demo.dir/classes/Connect4.cpp.i: cmake_force
@@ -313,7 +327,7 @@ CMakeFiles/demo.dir/classes/Connect4.cpp.s: cmake_force
 CMakeFiles/demo.dir/classes/Chess.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/classes/Chess.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Chess.cpp
 CMakeFiles/demo.dir/classes/Chess.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/demo.dir/classes/Chess.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/demo.dir/classes/Chess.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/classes/Chess.cpp.o -MF CMakeFiles/demo.dir/classes/Chess.cpp.o.d -o CMakeFiles/demo.dir/classes/Chess.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Chess.cpp
 
 CMakeFiles/demo.dir/classes/Chess.cpp.i: cmake_force
@@ -327,7 +341,7 @@ CMakeFiles/demo.dir/classes/Chess.cpp.s: cmake_force
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/imgui/imgui_impl_opengl3.cpp
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/imgui/imgui_impl_opengl3.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.i: cmake_force
@@ -341,7 +355,7 @@ CMakeFiles/demo.dir/imgui/imgui_impl_opengl3.cpp.s: cmake_force
 CMakeFiles/demo.dir/main_macos.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/main_macos.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/main_macos.cpp
 CMakeFiles/demo.dir/main_macos.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/demo.dir/main_macos.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/demo.dir/main_macos.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/main_macos.cpp.o -MF CMakeFiles/demo.dir/main_macos.cpp.o.d -o CMakeFiles/demo.dir/main_macos.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/main_macos.cpp
 
 CMakeFiles/demo.dir/main_macos.cpp.i: cmake_force
@@ -355,7 +369,7 @@ CMakeFiles/demo.dir/main_macos.cpp.s: cmake_force
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o: CMakeFiles/demo.dir/flags.make
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o: /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/imgui/imgui_impl_glfw.cpp
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o: CMakeFiles/demo.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o -MF CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o.d -o CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o -c /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/imgui/imgui_impl_glfw.cpp
 
 CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.i: cmake_force
@@ -381,6 +395,7 @@ demo_OBJECTS = \
 "CMakeFiles/demo.dir/classes/Square.cpp.o" \
 "CMakeFiles/demo.dir/classes/ChessSquare.cpp.o" \
 "CMakeFiles/demo.dir/classes/Grid.cpp.o" \
+"CMakeFiles/demo.dir/classes/Logger.cpp.o" \
 "CMakeFiles/demo.dir/classes/TicTacToe.cpp.o" \
 "CMakeFiles/demo.dir/classes/Checkers.cpp.o" \
 "CMakeFiles/demo.dir/classes/Othello.cpp.o" \
@@ -406,6 +421,7 @@ demo: CMakeFiles/demo.dir/classes/Sprite.cpp.o
 demo: CMakeFiles/demo.dir/classes/Square.cpp.o
 demo: CMakeFiles/demo.dir/classes/ChessSquare.cpp.o
 demo: CMakeFiles/demo.dir/classes/Grid.cpp.o
+demo: CMakeFiles/demo.dir/classes/Logger.cpp.o
 demo: CMakeFiles/demo.dir/classes/TicTacToe.cpp.o
 demo: CMakeFiles/demo.dir/classes/Checkers.cpp.o
 demo: CMakeFiles/demo.dir/classes/Othello.cpp.o
@@ -417,7 +433,7 @@ demo: CMakeFiles/demo.dir/imgui/imgui_impl_glfw.cpp.o
 demo: CMakeFiles/demo.dir/build.make
 demo: /opt/homebrew/lib/libglfw.3.4.dylib
 demo: CMakeFiles/demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Linking CXX executable demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying resources to runtime output dir"
 	/Applications/CMake.app/Contents/bin/cmake -E copy_directory /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/resources /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/build/resources

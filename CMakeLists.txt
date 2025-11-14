@@ -60,6 +60,7 @@ add_executable(demo Application.cpp
                           classes/Square.cpp
                           classes/ChessSquare.cpp
                           classes/Grid.cpp
+                          classes/Logger.cpp
                           classes/TicTacToe.cpp
                           classes/Checkers.cpp
                           classes/Othello.cpp
