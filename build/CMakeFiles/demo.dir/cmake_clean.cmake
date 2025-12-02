@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/demo.dir/classes/Connect4.cpp.o.d"
   "CMakeFiles/demo.dir/classes/Game.cpp.o"
   "CMakeFiles/demo.dir/classes/Game.cpp.o.d"
+  "CMakeFiles/demo.dir/classes/GameState.cpp.o"
+  "CMakeFiles/demo.dir/classes/GameState.cpp.o.d"
   "CMakeFiles/demo.dir/classes/Grid.cpp.o"
   "CMakeFiles/demo.dir/classes/Grid.cpp.o.d"
   "CMakeFiles/demo.dir/classes/Logger.cpp.o"

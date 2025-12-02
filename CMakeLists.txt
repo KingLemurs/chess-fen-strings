@@ -55,6 +55,7 @@ add_executable(demo Application.cpp
                           imgui/imgui.cpp
                           classes/Bit.cpp
                           classes/BitHolder.cpp
+                          classes/GameState.cpp
                           classes/Game.cpp
                           classes/Sprite.cpp
                           classes/Square.cpp

@@ -962,4 +962,5 @@ CMakeFiles/demo.dir/Application.cpp.o: \
   /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Connect4.h \
   /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Chess.h \
   /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Bitboard.h \
+  /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/GameState.h \
   /Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.h

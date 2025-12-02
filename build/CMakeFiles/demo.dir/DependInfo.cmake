@@ -16,6 +16,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/ChessSquare.cpp" "CMakeFiles/demo.dir/classes/ChessSquare.cpp.o" "gcc" "CMakeFiles/demo.dir/classes/ChessSquare.cpp.o.d"
   "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Connect4.cpp" "CMakeFiles/demo.dir/classes/Connect4.cpp.o" "gcc" "CMakeFiles/demo.dir/classes/Connect4.cpp.o.d"
   "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Game.cpp" "CMakeFiles/demo.dir/classes/Game.cpp.o" "gcc" "CMakeFiles/demo.dir/classes/Game.cpp.o.d"
+  "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/GameState.cpp" "CMakeFiles/demo.dir/classes/GameState.cpp.o" "gcc" "CMakeFiles/demo.dir/classes/GameState.cpp.o.d"
   "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Grid.cpp" "CMakeFiles/demo.dir/classes/Grid.cpp.o" "gcc" "CMakeFiles/demo.dir/classes/Grid.cpp.o.d"
   "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Logger.cpp" "CMakeFiles/demo.dir/classes/Logger.cpp.o" "gcc" "CMakeFiles/demo.dir/classes/Logger.cpp.o.d"
   "/Users/joshsgyatt/Documents/GitHub/chess-fen-strings/classes/Othello.cpp" "CMakeFiles/demo.dir/classes/Othello.cpp.o" "gcc" "CMakeFiles/demo.dir/classes/Othello.cpp.o.d"

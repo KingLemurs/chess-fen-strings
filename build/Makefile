@@ -715,6 +715,30 @@ classes/Game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/Game.cpp.s
 .PHONY : classes/Game.cpp.s
 
+classes/GameState.o: classes/GameState.cpp.o
+.PHONY : classes/GameState.o
+
+# target to build an object file
+classes/GameState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/GameState.cpp.o
+.PHONY : classes/GameState.cpp.o
+
+classes/GameState.i: classes/GameState.cpp.i
+.PHONY : classes/GameState.i
+
+# target to preprocess a source file
+classes/GameState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/GameState.cpp.i
+.PHONY : classes/GameState.cpp.i
+
+classes/GameState.s: classes/GameState.cpp.s
+.PHONY : classes/GameState.s
+
+# target to generate assembly for a file
+classes/GameState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/demo.dir/build.make CMakeFiles/demo.dir/classes/GameState.cpp.s
+.PHONY : classes/GameState.cpp.s
+
 classes/Grid.o: classes/Grid.cpp.o
 .PHONY : classes/Grid.o
 
@@ -1115,6 +1139,9 @@ help:
 	@echo "... classes/Game.o"
 	@echo "... classes/Game.i"
 	@echo "... classes/Game.s"
+	@echo "... classes/GameState.o"
+	@echo "... classes/GameState.i"
+	@echo "... classes/GameState.s"
 	@echo "... classes/Grid.o"
 	@echo "... classes/Grid.i"
 	@echo "... classes/Grid.s"

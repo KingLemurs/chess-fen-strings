@@ -6,7 +6,7 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -F/Applications/Xcode15.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -isystem /opt/homebrew/include
 
-CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64
+CXX_FLAGSarm64 = -O3 -DNDEBUG -std=gnu++20 -arch arm64
 
-CXX_FLAGS = -g -std=gnu++20 -arch arm64
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++20 -arch arm64
 
